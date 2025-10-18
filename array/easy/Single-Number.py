@@ -1,10 +1,6 @@
-class Solution {
-public:
-    int singleNumber(vector<int>& nums) {
-        int result = 0;
-        for (int num : nums) {
-            result ^= num; 
-        }
-        return result;
-    }
-};
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        result = 0
+        for num in nums:
+            result ^= num  
+        return result
