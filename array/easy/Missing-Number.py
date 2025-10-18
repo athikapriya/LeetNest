@@ -1,14 +1,7 @@
-class Solution {
-public:
-    int missingNumber(vector<int>& nums) {
-        int n = nums.size();
-        int expected_sum = n * (n + 1) / 2; // Sum of numbers from 0 to n
-        int actual_sum = 0;
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        n = len(nums)
+        expected_sum = n * (n + 1) // 2
+        actual_sum = sum(nums)
+        return expected_sum - actual_sum
 
-        for (int num : nums) {
-            actual_sum += num;
-        }
-
-        return expected_sum - actual_sum; // The missing number
-    }
-};
